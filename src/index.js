@@ -1,13 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+
+/*
+  style
+*/ 
 import './index.css';
-import App from './App';
+
 import reportWebVitals from './reportWebVitals';
 
+/*
+  components
+*/
+import HeaderCom from "./components/Header/Header";
+
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <div className="home-main-out-box">
+    <HeaderCom></HeaderCom>
+  </div>,
   document.getElementById('root')
 );
 
