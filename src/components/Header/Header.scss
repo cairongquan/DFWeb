@@ -1,51 +1,59 @@
 .main-header-box {
-    height: 35px;
-    background-color: #f1f1f1;
-    -webkit-app-region: drag;
-    position: relative;
+  height: 35px;
+  background-image: linear-gradient(#f4f9fc, #f7faff);
+  -webkit-app-region: drag;
+  position: relative;
 
-    .header-logo-box {
-        width: 190px;
-        height: 20px;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 10px;
-        display: flex;
-        align-items: center;
+  .header-logo-box {
+    width: 190px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    display: flex;
+    align-items: center;
+    user-select: none;
 
-        img {
-            width: 20px;
-            height: 100%;
-        }
-
-        span {
-            margin-left: 5px;
-            font-size: 12px;
-            color: #00003a;
-        }
+    img {
+      width: 20px;
+      height: 100%;
     }
 
-    .tool-area-box {
-        position: absolute;
-        right: 0;
-        width: 180px;
-        display: flex;
-        height: 100%;
-
-        .tool-item {
-            width: 60px;
-            height: 100%;
-            line-height: 35px;
-            transition: all 200ms ease-in-out;
-            cursor: pointer;
-            z-index: 2;
-            text-align: center;
-        }
-
-        .tool-item:hover {
-            background-color: #00003a;
-            -webkit-app-region: no-drag;
-        }
+    span {
+      margin-left: 5px;
+      font-size: 12px;
+      color: #00003a;
     }
+  }
+
+  .tool-area-box {
+    position: absolute;
+    right: 0;
+    width: 141px;
+    display: flex;
+    height: 100%;
+    -webkit-app-region: no-drag;
+
+    .tool-item {
+      width: 47px;
+      height: 100%;
+      line-height: 35px;
+      transition: all 200ms ease-in-out;
+      cursor: pointer;
+      z-index: 2;
+      text-align: center;
+      color: #b5b5b5;
+      font-weight: 600;
+    }
+
+    .tool-item:hover {
+      background-color: #ddecff;
+      -webkit-app-region: no-drag;
+    }
+
+    .close-btn:hover {
+      background-color: #ddecff;
+    }
+  }
 }
