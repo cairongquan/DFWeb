@@ -1,14 +1,20 @@
-@import url(//at.alicdn.com/t/font_2585248_jipmpxnt22g.css);
+@import url(//at.alicdn.com/t/font_2585248_ymha08pz1ko.css);
 
 body {
     min-width: 200px;
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+}
+
+.home-main-out-box {
+    height: 100vh;
+    /* background: linear-gradient(48deg, #ffc107, #dd001b, #1b7ad6); */
+    background-image: linear-gradient(108deg, #f4f9fc, #dbebef, #dbebef, #cde3e9);
 }
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+        monospace;
 }
