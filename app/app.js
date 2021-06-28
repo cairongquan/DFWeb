@@ -15,4 +15,8 @@ app.all('*', (req, res, next) => {
 
 app.use("/handle", handle);
 
-module.exports = app;
+app.listen(9012, () => {
+    console.log("serve run successful");
+},)
+
+// module.exports = app;

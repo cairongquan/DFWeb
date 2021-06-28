@@ -39,3 +39,4 @@ export default class HeaderCom extends react.Component {
         return renderJS.call(this);
     }
 }
+
