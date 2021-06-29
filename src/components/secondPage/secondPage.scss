@@ -1,0 +1,16 @@
+.main-out-box-secondPage {
+    height: calc(100vh - 90px);
+    overflow-y: scroll;
+    overflow-x: none;
+}
+
+.main-out-box-secondPage::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #94bbe2;
+    box-shadow: 2px 2px 12px rgba(101, 158, 214, .5);
+}
+
+.main-out-box-secondPage::-webkit-scrollbar {
+    width: 10px;
+    height: 0px;
+}

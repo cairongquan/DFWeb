@@ -10,7 +10,11 @@ handle.get("/", (req, res) => {
     request({
         method: "GET",
         url: req.query.url,
+        headers: {
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.114 Safari/537.36 Edg/91.0.864.59"
+        }
     }, (err, data) => {
+        console.log(data);
         if (err) {
             console.log(err);
             return res.send({
@@ -36,7 +40,7 @@ handle.get("/", (req, res) => {
         }
         if (!finalArray.length) {
             return res.send({
-                codZe: 500,
+                code: 500,
                 data: null,
                 msg: "fail no file"
             })

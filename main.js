@@ -30,7 +30,7 @@ function createWindow() {
     })
 
     // 然后加载应用的 index.html。  url 及本地文件形式
-    win.loadURL('http://localhost:3001')
+    win.loadURL('http://localhost:3000')
     // win.loadFile('public/index.html')
     //如果想要让electron加载本地打包好的React文件的build文件下的内容是这样子的：(这个问题困扰我很久，解决了。分享下2019-4-29添加)
     // win.loadURL(`file://${path.join(__dirname, '../build/index.html')}`)

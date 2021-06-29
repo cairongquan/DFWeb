@@ -4,7 +4,7 @@ export default function renderJs() {
     return (
         <div className="main-header-box">
             <div className="header-logo-box">
-                <img src={this.state.headLogo} alt="logo_picturs"/>
+                <img src={this.state.headLogo} alt="logo_picturs" />
                 <span>DfWeb</span>
             </div>
 

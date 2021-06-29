@@ -1,0 +1,17 @@
+.main-mask-box {
+    width: 100%;
+    height: calc(100vh - 35px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all ease-in-out 200ms;
+    z-index: 1;
+    backdrop-filter: blur(0px);
+
+    .wrap-load-com {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
