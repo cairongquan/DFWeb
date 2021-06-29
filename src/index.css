@@ -1,5 +1,6 @@
 @import url(//at.alicdn.com/t/font_2585248_ymha08pz1ko.css);
 
+
 body {
     min-width: 200px;
     margin: 0;
@@ -7,9 +8,11 @@ body {
         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
         sans-serif;
     overflow-x: none;
+    overflow-y: none;
 }
 
 .home-main-out-box {
+    overflow-y: none;
     height: 100vh;
     /* background: linear-gradient(48deg, #ffc107, #dd001b, #1b7ad6); */
     background-image: linear-gradient(108deg, #f4f9fc, #dbebef, #dbebef, #deecfa);

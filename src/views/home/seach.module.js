@@ -4,7 +4,7 @@ import axios from "axios";
 export const seachModuleJs = {
     clickSeachHandle: async function () { //搜索按钮点击事件
         if (!this.state.inputValue) {
-            return message.warn("请输入网址!")
+            return message.warn({ content: "请输入网址!", duration: 1 })
         }
         if (!this.isUrl(this.state.inputValue)) {
             return message.error("网址格式错误!");
@@ -35,7 +35,7 @@ export const seachModuleJs = {
             }
             this.setState(() => ({
                 activePage: `-50%`,
-                imageData: res.data.map((item) => ({ name: item.name, path: item.path, isCheck: true }))
+                imageData: res.data.map((item) => ({ name: item.name, path: item.path, isCheck: false }))
             }));
             console.log(this.state.imageData);
             message.success({ content: "资源获取成功", duration: 1 });

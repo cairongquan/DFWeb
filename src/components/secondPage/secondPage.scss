@@ -1,16 +1,120 @@
 .main-out-box-secondPage {
-    height: calc(100vh - 90px);
+    height: calc(100vh - 120px);
     overflow-y: scroll;
     overflow-x: none;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: relative;
+
+    // 操作区域
+    .tool-box-main {
+        position: fixed;
+        left: 50%;
+        top: 60px;
+        width: 260px;
+        height: 320px;
+        background-color: #eff6f8;
+        border-radius: 6.25px;
+        margin: 10px;
+        box-shadow: 1px 2px 12px 1px rgba(0, 0, 0, .1);
+        padding: 20px;
+
+        .tool-box-main-item {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+
+            span {
+                font-size: 16px;
+            }
+        }
+    }
+
+
+
+    // 图片展示区域
+    .show-box {
+        margin-left: 280px;
+        width: calc(100% - 290px);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        transition: all ease-in-out 250ms;
+
+        .image-show-box {
+            transition: all ease-in-out 250ms;
+            width: 210px;
+            margin: 5px;
+            background-color: rgba(255, 255, 255, .55);
+            height: 90px;
+            border-radius: 6.25px;
+            padding: 0px 10px;
+            box-shadow: 2px 1px 10px .2px rgba(0, 0, 0, .1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            img {
+                width: 55px;
+                height: 55px;
+            }
+
+            .image-name {
+                width: 135px;
+                margin-left: 10px;
+                position: relative;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                overflow: hidden;
+                -webkit-box-orient: vertical;
+            }
+
+            .check-box-image {
+                width: 16px;
+                height: 16px;
+                border-radius: 100%;
+                border: 1px solid #898e96;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                transition: all ease-in-out 200ms;
+            }
+        }
+
+        .image-show-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .image-show-box:hover .check-box-image {
+            border: 6px solid #1890ff;
+        }
+    }
 }
 
 .main-out-box-secondPage::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background-color: #94bbe2;
+    background-color: #1890ff;
     box-shadow: 2px 2px 12px rgba(101, 158, 214, .5);
 }
 
 .main-out-box-secondPage::-webkit-scrollbar {
     width: 10px;
     height: 0px;
+}
+
+.check-box-image-all {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    border: 1.2px solid #898e96;
+    transition: all ease-in-out 200ms;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-top: 2px;
+}
+
+.check-box-image-all:hover {
+    border: 8px solid #1890ff;
 }
