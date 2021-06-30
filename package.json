@@ -11,6 +11,7 @@
     "cheerio": "^1.0.0-rc.10",
     "clipboardy": "^2.3.0",
     "concurrently": "^6.2.0",
+    "diskinfo": "0.0.3",
     "express": "^4.17.1",
     "node-sass": "^6.0.0",
     "react": "^17.0.2",
@@ -21,13 +22,31 @@
     "web-vitals": "^1.1.2"
   },
   "main": "main.js",
+  "build": {
+    "appId": "com.xxx.app",
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "zip"
+      ]
+    },
+    "extends": null
+  },
   "scripts": {
     "dev": "electron .",
     "all": "react-scripts start \"electron .",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "start": "react-scripts start"
+    "start": "react-scripts start",
+    "win": "electron-builder --win --x64",
+    "package": "electron-packager ./build --win --out package/ --arch=x64 --app-version=1.1.0 --electron-version=13.1.4"
   },
   "eslintConfig": {
     "extends": [
@@ -35,6 +54,7 @@
       "react-app/jest"
     ]
   },
+  "homepage": ".",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -48,6 +68,7 @@
     ]
   },
   "devDependencies": {
-    "electron": "^13.1.4"
+    "electron": "^13.1.4",
+    "electron-packager": "^15.2.0"
   }
 }

@@ -13,10 +13,7 @@ app.all('*', (req, res, next) => {
     next();
 });
 
+
+
 app.use("/handle", handle);
-
-app.listen(9012, () => {
-    console.log("serve run successful");
-},)
-
-// module.exports = app;
+module.exports = app;

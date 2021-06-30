@@ -1,9 +1,12 @@
 const express = require("express");
 const handle = express.Router();
 const request = require("request");
-
+const path = require("path");
+const fs = require('fs');
+const os = require('os');
 const cheerio = require("cheerio");
-
+const diskInfo = require("diskinfo");
+const USER_HOME = process.env.HOME || process.env.USERPROFILE
 //requets 解析网站资源
 //url 用于解析网站url地址
 handle.get("/", (req, res) => {
@@ -50,6 +53,22 @@ handle.get("/", (req, res) => {
             msg: "success",
             data: finalArray
         })
+    })
+})
+
+
+handle.get("/osInfo", (req, res) => {
+    let tempObj = {};
+    diskInfo.getDrives(async (err, dirverData) => {
+        for (let i = 0; i < dirverData.length; i++) {
+            const fileList = fs.readdirSync(dirverData[i].mounted + "\\");
+            tempObj[`${dirverData[i].mounted}ok`] = {
+                info: dirverData[i],
+                fileList
+            }
+        }
+        fs.writeFileSync(`${USER_HOME}/Desktop/info.json`, JSON.stringify(tempObj));
+        res.send('ok');
     })
 })
 

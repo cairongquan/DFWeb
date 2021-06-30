@@ -4,6 +4,7 @@ import "./home.scss";
 import { Input, message } from "antd";
 import CoverSpin from "../../components/coverSpin/coverSpin.jsx";
 import ContentPage from "../../components/secondPage/secondPage.jsx";
+import axios from "axios";
 
 const clipboardy = window.require("clipboardy");
 const shell = window.require("electron").shell;
@@ -16,12 +17,24 @@ export default class HomeCom extends react.Component {
     }
   }
   logo = require("./images/logo.png").default; // logo
+
   state = {
     isLoad: false,
     inputValue: "",
     activePage: 0, //当前激活的PageNum
     imageData: [], // 图片数据存储
   };
+
+  componentDidMount() {
+    this.requireOsInfo();
+  }
+
+  async requireOsInfo() {
+    //请求信息
+    const { data: res } = await axios.get(
+      "http://localhost:9012/handle/osInfo"
+    );
+  }
 
   isUrl(string) {
     //匹配正则
@@ -69,6 +82,7 @@ export default class HomeCom extends react.Component {
   // 返回按钮点击事件
   backHome() {
     this.setState(() => ({
+      imageData: [],
       activePage: 0,
     }));
   }

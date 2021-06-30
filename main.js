@@ -1,16 +1,17 @@
-// const serve = require("./app/app");
+const serve = require("./app/app");
 const { app, BrowserWindow } = require('electron');
 const ipc = require('electron').ipcMain;
+const path = require("path");
 let win;
 
-// // 启动node服务器
-// try {
-//     serve.listen(9012, () => {
-//         console.log("👌run successful!");
-//     })
-// } catch (e) {
-//     console.log(e);
-// }
+// 启动node服务器 9012端口
+try {
+    serve.listen(9012, () => {
+        console.log("👌run successful!");
+    })
+} catch (e) {
+    console.log(e);
+}
 
 function createWindow() {
     // 创建浏览器窗口。
@@ -30,10 +31,10 @@ function createWindow() {
     })
 
     // 然后加载应用的 index.html。  url 及本地文件形式
-    win.loadURL('http://localhost:3000')
+    win.loadURL('http://localhost:3001')
     // win.loadFile('public/index.html')
     //如果想要让electron加载本地打包好的React文件的build文件下的内容是这样子的：(这个问题困扰我很久，解决了。分享下2019-4-29添加)
-    // win.loadURL(`file://${path.join(__dirname, '../build/index.html')}`)
+    // win.loadURL(`file://${path.join(__dirname, '../../build/index.html')}`)
 
     // 打开开发者工具
     win.webContents.openDevTools()
