@@ -39,6 +39,6 @@ export const seachModuleJs = {
             }));
             console.log(this.state.imageData);
             message.success({ content: "资源获取成功", duration: 1 });
-        }, 1300);
+        }, 700);
     }
 }

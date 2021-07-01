@@ -1,7 +1,9 @@
 const express = require('express');
 const app = express();
 const handle = require("./router/handle");
-
+const bodyParser = require("body-parser");
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.all('*', (req, res, next) => {
     console.log(`requireUrl:[${req.url}] fromServe`);
@@ -16,4 +18,7 @@ app.all('*', (req, res, next) => {
 
 
 app.use("/handle", handle);
-module.exports = app;
+app.listen(9012, () => {
+    console.log("✈serve run successful");
+})
+// module.exports = app;

@@ -87,6 +87,15 @@ export default class HomeCom extends react.Component {
     }));
   }
 
+  startLoad = () => {
+    console.log(this);
+    this.setState(() => ({ isLoad: true }));
+  };
+
+  clearLoad = () => {
+    this.setState(() => ({ isLoad: false }));
+  };
+
   render() {
     return (
       // 外层盒子
@@ -148,6 +157,7 @@ export default class HomeCom extends react.Component {
 
           {/* 下载页面 */}
           <div className="second-page-box">
+            <CoverSpin state={this.state.isLoad}></CoverSpin>
             {/* 头部 */}
             <header className="second-page-box-header">
               <div className="back-btn" onClick={this.backHome.bind(this)}>
@@ -155,7 +165,11 @@ export default class HomeCom extends react.Component {
                 <span>返回</span>
               </div>
             </header>
-            <ContentPage data={this.state.imageData}></ContentPage>
+            <ContentPage
+              clearLoad={this.clearLoad}
+              startLoad={this.startLoad}
+              data={this.state.imageData}
+            ></ContentPage>
           </div>
         </div>
       </div>
