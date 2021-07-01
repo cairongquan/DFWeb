@@ -1,5 +1,5 @@
 ## <center>DownloadFromWeb</center>
-<center><img src="./logo.png" style="width:60px;"/></center>
+<center><img src="logo.png" style="width:60px;"/></center>
 
 ### <center>一个可以从网站页面下载任何资源的开源工具</center>
  基于React、Electron开发
@@ -15,7 +15,7 @@
 运行Electron
 
 #### <canter>接下来你就能看到一个友好清爽的界面</center>
-<center><img src="./home.png" style="width:500px"/></center>
+<center><img src="home.png" style="width:500px"/></center>
 
 - 开发时正好赶上windows11发布 于是便借鉴了windows11设计
 - 运行时会自动开启一个nodeJS中间件服务器 在9012端口 确保该端口没有被占用
