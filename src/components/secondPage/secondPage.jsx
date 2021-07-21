@@ -165,7 +165,7 @@ export default class ContentPage extends Component {
             style={{
               backgroundColor:
                 this.state.putAddressVal &&
-                this.props.data.filter((item) => item.isCheck).length
+                  this.props.data.filter((item) => item.isCheck).length
                   ? "#1890ff"
                   : "",
             }}

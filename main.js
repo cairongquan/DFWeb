@@ -2,9 +2,9 @@
 const { app, BrowserWindow } = require('electron');
 const ipc = require('electron').ipcMain;
 const path = require("path");
-let win;
+var win;
 
-// // 启动node服务器 9012端口
+// 启动node服务器 9012端口
 // try {
 //     serve.listen(9012, () => {
 //         console.log("👌run successful!");
@@ -16,9 +16,9 @@ let win;
 function createWindow() {
     // 创建浏览器窗口。
     win = new BrowserWindow({ //
-        height: 600,
+        minHeight: 600,
         useContentSize: true,
-        width: 800,//宽
+        minWidth: 800,//宽
         frame: false,//无边框
         resizable: true,//用户可拖拽大小尺寸
         transparent: false, //背景是否透明

@@ -91,6 +91,12 @@ handle.post("/putFile", async (req, res) => {
         // const imageObj = await getImageObj(data[i].path, address); //读取下载缓存文件资源
         const ws = fs.createWriteStream(`${address}/${i}.png`);
         try {
+            // request({
+            //     url: data[i].path,
+            //     method: "GET"
+            // }, (err, data) => {
+            //     data.pipe(ws);
+            // });
             request(data[i].path).pipe(ws);
         } catch (e) {
             if (data[i].path.split("//")[0] !== "http" || data[i].path.split("//")[0] !== "https") {
